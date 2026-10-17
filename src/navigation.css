@@ -1,0 +1,127 @@
+/* Navigation polish across the sticky header, mobile menu and footer. */
+.header {
+  background: #000;
+  backdrop-filter: none;
+}
+
+.nav {
+  gap: clamp(20px, 2.6vw, 36px);
+}
+
+.nav > a:not(.nav-contact) {
+  position: relative;
+  padding-block: 12px;
+  color: #c1c2b9;
+}
+
+.nav > a:not(.nav-contact)::after {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  left: 0;
+  height: 1px;
+  background: var(--lime);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.nav > a:not(.nav-contact):hover,
+.nav > a[aria-current='location']:not(.nav-contact) {
+  color: #f3f4ec;
+}
+
+.nav > a:not(.nav-contact):hover::after,
+.nav > a[aria-current='location']:not(.nav-contact)::after {
+  transform: scaleX(1);
+}
+
+.nav-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 42px;
+  border-color: #46483e;
+  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+
+.nav-contact[aria-current='location'] {
+  border-color: var(--lime);
+  color: var(--lime) !important;
+}
+
+.menu-toggle {
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+  border-color: var(--lime);
+  color: var(--lime);
+}
+
+.footer-nav a,
+.back-top,
+.footer-bottom a,
+.footer-wordmark {
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible,
+.footer-bottom a:hover,
+.footer-bottom a:focus-visible {
+  color: var(--lime);
+}
+
+.back-top:hover,
+.back-top:focus-visible {
+  color: #11120c;
+}
+
+.hero-foot a,
+.service-footer a,
+.contact-direct a {
+  transition: color 180ms ease;
+}
+
+.hero-foot a:hover,
+.service-footer a:hover,
+.contact-direct a:hover {
+  color: var(--lime);
+}
+
+@media (max-width: 760px) {
+  .nav {
+    gap: 0;
+    background: #000;
+    border-color: #ffffff24;
+  }
+
+  .nav > a:not(.nav-contact) {
+    padding: 15px 4px;
+  }
+
+  .nav > a:not(.nav-contact)::after {
+    right: auto;
+    bottom: 8px;
+    width: 28px;
+  }
+
+  .nav .nav-contact {
+    align-self: flex-start;
+    margin-top: 14px;
+    padding: 13px 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav > a:not(.nav-contact)::after {
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

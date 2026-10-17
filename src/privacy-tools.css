@@ -1,0 +1,402 @@
+.privacy-settings-trigger {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #cacbc2;
+  font: inherit;
+  font-size: 11px;
+  text-align: left;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.privacy-settings-trigger:hover,
+.privacy-settings-trigger:focus-visible {
+  color: var(--lime);
+}
+
+.cookie-banner {
+  position: fixed;
+  z-index: 50;
+  right: 22px;
+  bottom: 22px;
+  left: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  max-width: 1040px;
+  margin-inline: auto;
+  padding: 18px 20px;
+  border: 1px solid #41443a;
+  background: #090a08;
+  box-shadow: 0 18px 60px #000b;
+}
+
+.cookie-copy {
+  max-width: 570px;
+}
+
+.cookie-kicker {
+  color: var(--lime);
+  font: 9px var(--mono);
+  letter-spacing: .12em;
+}
+
+.cookie-copy p,
+.cookie-dialog > p {
+  margin: 8px 0 0;
+  color: #bfc0b7;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.cookie-copy a,
+.cookie-policy-link {
+  color: var(--lime);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-actions,
+.cookie-dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cookie-button {
+  min-height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #55574d;
+  font: 600 10px var(--mono);
+  cursor: pointer;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.cookie-primary {
+  border-color: var(--lime);
+  background: var(--lime);
+  color: #11120c;
+}
+
+.cookie-primary:hover {
+  border-color: #d8ff94;
+  background: #d8ff94;
+}
+
+.cookie-secondary {
+  background: #10110f;
+  color: #f1f2eb;
+}
+
+.cookie-secondary:hover {
+  border-color: var(--lime);
+}
+
+.cookie-settings-link {
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: #bfc0b7;
+  font-size: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-settings-link:hover {
+  color: var(--lime);
+}
+
+.cookie-backdrop {
+  position: fixed;
+  z-index: 60;
+  inset: 0;
+  display: grid;
+  align-items: end;
+  justify-items: center;
+  padding: 20px;
+  background: #000a;
+}
+
+.cookie-dialog {
+  width: min(100%, 540px);
+  max-height: min(85vh, 720px);
+  overflow: auto;
+  padding: 27px;
+  border: 1px solid #46483e;
+  background: #090a08;
+  box-shadow: 0 20px 80px #000c;
+}
+
+.cookie-dialog h2 {
+  margin: 9px 0 0;
+  color: #f0f1eb;
+  font: 600 28px var(--display);
+  letter-spacing: -.05em;
+}
+
+.cookie-dialog-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cookie-close {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border: 1px solid #55574d;
+  background: transparent;
+  color: #e7e8df;
+  font-size: 21px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cookie-close:hover {
+  border-color: var(--lime);
+  color: var(--lime);
+}
+
+.cookie-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 16px 0;
+  border-top: 1px solid #ffffff1c;
+}
+
+.cookie-dialog > p + .cookie-category {
+  margin-top: 19px;
+}
+
+.cookie-category strong {
+  color: #f0f1eb;
+  font-size: 12px;
+}
+
+.cookie-category p,
+.cookie-category small {
+  display: block;
+  max-width: 360px;
+  margin: 5px 0 0;
+  color: #a9aaa1;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.cookie-always {
+  flex: 0 0 auto;
+  color: var(--lime);
+  font: 9px var(--mono);
+}
+
+.cookie-toggle {
+  cursor: pointer;
+}
+
+.cookie-toggle input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  accent-color: var(--lime);
+  cursor: pointer;
+}
+
+.cookie-dialog-actions {
+  justify-content: flex-start;
+  padding-top: 18px;
+}
+
+.cookie-policy-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 11px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  z-index: 30;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.whatsapp-trigger {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  border: 1px solid #c4f36a;
+  border-radius: 999px;
+  background: #c4f36a;
+  color: #11120c;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 30px #0008;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.whatsapp-trigger:hover {
+  transform: translateY(-2px);
+  background: #d6ff8b;
+}
+
+.whatsapp-trigger svg {
+  width: 23px;
+  height: 23px;
+  fill: currentColor;
+}
+
+.whatsapp-panel {
+  width: min(300px, calc(100vw - 32px));
+  padding: 16px;
+  border: 1px solid #3c3e35;
+  background: #090a08;
+  box-shadow: 0 16px 50px #000c;
+  animation: whatsapp-panel-in 180ms ease both;
+}
+
+.whatsapp-panel-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  color: #f1f2eb;
+}
+
+.whatsapp-panel-heading strong {
+  font: 600 15px var(--display);
+}
+
+.whatsapp-panel-heading span {
+  color: #999b90;
+  font-size: 10px;
+}
+
+.whatsapp-panel > a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 2px;
+  border-top: 1px solid #ffffff1c;
+  color: #f1f2eb;
+  font-size: 12px;
+  transition: color 160ms ease;
+}
+
+.whatsapp-panel > a:hover {
+  color: var(--lime);
+}
+
+.whatsapp-panel > a span {
+  color: #a7a89e;
+  font: 10px var(--mono);
+}
+
+.contact-whatsapp-options {
+  display: grid;
+  gap: 9px;
+}
+
+.contact-whatsapp-link {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 11px 15px;
+  border: 1px solid #c4f36a;
+  background: var(--lime);
+  color: #11120c;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.contact-whatsapp-link:hover {
+  background: #d5ff88;
+}
+
+.contact-whatsapp-link strong,
+.contact-whatsapp-link small {
+  display: block;
+}
+
+.contact-whatsapp-link strong {
+  font-size: 12px;
+}
+
+.contact-whatsapp-link small {
+  margin-top: 4px;
+  font: 10px var(--mono);
+  opacity: .75;
+}
+
+.contact-whatsapp-link > .arrow {
+  margin: 0;
+}
+
+.contact-whatsapp-link:hover > .arrow {
+  transform: translate(3px, -3px);
+}
+
+@keyframes whatsapp-panel-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) {
+  .cookie-banner {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    display: block;
+    padding: 16px;
+  }
+
+  .cookie-actions {
+    justify-content: flex-start;
+    margin-top: 12px;
+  }
+
+  .cookie-button {
+    min-height: 38px;
+    font-size: 9px;
+  }
+
+  .cookie-dialog {
+    padding: 21px 18px;
+  }
+
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .whatsapp-trigger {
+    min-height: 48px;
+    padding-inline: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-trigger,
+  .whatsapp-trigger:hover {
+    transition: none;
+    transform: none;
+  }
+
+  .whatsapp-panel {
+    animation: none;
+  }
+}
